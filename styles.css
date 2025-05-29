@@ -1,0 +1,95 @@
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+.circle {
+  stroke-width: 20;
+  stroke: blue;
+  fill: none;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+.circle_back {
+  stroke-width: 20;
+  stroke: lightgray;
+  fill: none;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+.api_box {
+     /* background-color: blueviolet; */
+}
+
+.api {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.progress_value {
+    width: 60px;
+    height: 34px;
+    border-radius: 34px;
+    border: 1px solid black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.api_text {
+    font-size: 24px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+   border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}

@@ -9,7 +9,68 @@
 
 <body>
 
+    <div class="body">
+        <svg width="250" height="250" class="progress-bar">
+            <circle class="circle_back" cx="125" cy="125" r="110"></circle>
+            <circle class="circle" cx="125" cy="125" r="110"></circle>
+        </svg>
 
-<p>START</p>
+        <div class="api_box">
+            <div class="api">
+            <input class="progress_value" type="text" value="20">
+            <p class="api_text">Value</p>
+            </div>
+            <div class="api">
+            <label class="switch">
+                <input type="checkbox" class="animate">
+                <span class="slider"></span>
+            </label>
+            <p class="api_text">Animate</p>
+            </div>
+            <div class="api">
+            <label class="switch">
+                <input type="checkbox" class="hide">
+                <span class="slider"></span>
+            </label>
+            <p class="api_text">Hide</p>
+            </div>
+        </div>
+    </div>
+
+<script>
+    const circle = document.querySelector('.circle');
+    const input = document.querySelector('.progress_value');
+    const hide = document.querySelector('.hide');
+    const progressBar = document.querySelector('.progress-bar');
+    const radius = circle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+    
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    const setProgress = (percent) => {
+        const offset = circumference - percent / 100 * circumference;
+        circle.style.strokeDashoffset = offset;
+    }
+
+    const setHide = (hide) => {
+        if (hide) {
+            progressBar.style.visibility = "hidden";
+        } else {
+           progressBar.style.visibility = "visible";
+        }
+    }
+
+    setProgress(40);
+
+    input.addEventListener('input', function () {
+        setProgress(input.value);
+    });
+
+    hide.addEventListener('input', function () {
+        setHide(hide.checked);
+    });
+</script>
 
 </body>
