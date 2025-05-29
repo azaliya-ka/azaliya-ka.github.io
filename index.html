@@ -41,6 +41,7 @@
     const circle = document.querySelector('.circle');
     const input = document.querySelector('.progress_value');
     const hide = document.querySelector('.hide');
+    const animate = document.querySelector('.animate');
     const progressBar = document.querySelector('.progress-bar');
     const radius = circle.r.baseVal.value;
     const circumference = 2 * Math.PI * radius;
@@ -62,6 +63,14 @@
         }
     }
 
+     const setAnimation = (animate) => {
+        if (animate) {
+            progressBar.classList.add('animatinon');
+        } else {
+           progressBar.classList.remove('animatinon');
+        }
+    }
+
     setProgress(40);
 
     input.addEventListener('input', function () {
@@ -70,6 +79,10 @@
 
     hide.addEventListener('input', function () {
         setHide(hide.checked);
+    });
+
+    animate.addEventListener('input', function () {
+        setAnimation(animate.checked);
     });
 </script>
 

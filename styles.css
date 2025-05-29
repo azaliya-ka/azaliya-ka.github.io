@@ -81,15 +81,27 @@
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: blue;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px blue;
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+@keyframes example {
+  20% { transform:  translate(50%, 0%) rotate(90deg); }
+  50% { transform: translate(50%, 50%) rotate(180deg); }
+  75% { transform: translate(0%, 50%) rotate(270deg); }
+  100% { transform: translate(0%, 0%) rotate(360deg); }
+}
+
+.animatinon {
+    transition: transform 1s ease-in-out;
+    animation: example 4s infinite;
 }
