@@ -21,10 +21,6 @@
   transform: rotate(-90deg);
 }
 
-.api_box {
-     /* background-color: blueviolet; */
-}
-
 .api {
     display: flex;
     gap: 24px;
