@@ -5,86 +5,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>progress-bar</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <script src="./components/ProgressBar/progress-bar.js"></script>
+  <link href="./components/ProgressBar/progress-bar.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-
-    <div class="body">
-        <svg width="250" height="250" class="progress-bar">
-            <circle class="circle_back" cx="125" cy="125" r="110"></circle>
-            <circle class="circle" cx="125" cy="125" r="110"></circle>
-        </svg>
-
-        <div>
-            <div class="api">
-            <input class="progress_value" type="text" value="20">
-            <p class="api_text">Value</p>
-            </div>
-            <div class="api">
-            <label class="switch">
-                <input type="checkbox" class="animate">
-                <span class="slider"></span>
-            </label>
-            <p class="api_text">Animate</p>
-            </div>
-            <div class="api">
-            <label class="switch">
-                <input type="checkbox" class="hide">
-                <span class="slider"></span>
-            </label>
-            <p class="api_text">Hide</p>
-            </div>
-        </div>
-    </div>
-
-<script>
-    const circle = document.querySelector('.circle');
-    const progressValue = document.querySelector('.progress_value');
-    const hide = document.querySelector('.hide');
-    const animate = document.querySelector('.animate');
-    const progressBar = document.querySelector('.progress-bar');
-    const radius = circle.r.baseVal.value;
-    const circumference = 2 * Math.PI * radius;
-    
-
-    circle.style.strokeDasharray = `${circumference} ${circumference}`;
-    circle.style.strokeDashoffset = circumference;
-
-    const setProgress = (percent) => {
-        const offset = circumference - percent / 100 * circumference;
-        circle.style.strokeDashoffset = offset;
-    }
-
-    const setHide = (hide) => {
-        if (hide) {
-            progressBar.style.visibility = "hidden";
-        } else {
-           progressBar.style.visibility = "visible";
-        }
-    }
-
-     const setAnimation = (animate) => {
-        if (animate) {
-            progressBar.classList.add('animatinon');
-        } else {
-           progressBar.classList.remove('animatinon');
-        }
-    }
-
-    setProgress(20);
-
-    progressValue.addEventListener('input', function () {
-        setProgress(progressValue.value);
-    });
-
-    hide.addEventListener('input', function () {
-        setHide(hide.checked);
-    });
-
-    animate.addEventListener('input', function () {
-        setAnimation(animate.checked);
-    });
-</script>
-
+    <progress-bar progress='20'></progress-bar>
 </body>
