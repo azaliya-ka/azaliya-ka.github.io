@@ -101,3 +101,27 @@ input:checked + .slider:before {
     transition: transform 1s ease-in-out;
     animation: example 4s infinite;
 }
+
+@media (max-width: 700px) {
+    @keyframes example {
+  20% { transform:  translate(25%, 0%) rotate(90deg); }
+  50% { transform: translate(25%, 25%) rotate(180deg); }
+  75% { transform: translate(0%, 25%) rotate(270deg); }
+  100% { transform: translate(0%, 0%) rotate(360deg); }
+}
+}
+
+@media (max-width: 560px) {
+  .body {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 48px;
+  }
+
+   @keyframes example {
+    20% { transform:  translate(15%, 0%) rotate(90deg); }
+    50% { transform: translate(15%, 15%) rotate(180deg); }
+    75% { transform: translate(0%, 15%) rotate(270deg); }
+    100% { transform: translate(0%, 0%) rotate(360deg); }
+  }
+}

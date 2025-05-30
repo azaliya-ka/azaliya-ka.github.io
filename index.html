@@ -3,6 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>progress-bar</title>
   <LINK href="styles.css" rel="stylesheet" type="text/css">
 </head>
@@ -39,7 +40,7 @@
 
 <script>
     const circle = document.querySelector('.circle');
-    const input = document.querySelector('.progress_value');
+    const progressValue = document.querySelector('.progress_value');
     const hide = document.querySelector('.hide');
     const animate = document.querySelector('.animate');
     const progressBar = document.querySelector('.progress-bar');
@@ -73,8 +74,8 @@
 
     setProgress(20);
 
-    input.addEventListener('input', function () {
-        setProgress(input.value);
+    progressValue.addEventListener('input', function () {
+        setProgress(progressValue.value);
     });
 
     hide.addEventListener('input', function () {
