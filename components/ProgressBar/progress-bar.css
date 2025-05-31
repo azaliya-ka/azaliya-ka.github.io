@@ -31,6 +31,8 @@
 .progress_value {
     width: 60px;
     height: 34px;
+    padding: 0;
+    box-sizing: border-box;
     border-radius: 34px;
     border: 1px solid black;
     font-size: 18px;
