@@ -1,7 +1,7 @@
 class ProgressBar extends HTMLElement {
     static observedAttributes = ["progress"];
     constructor() {
-        super();   
+        super();
         this.circle;
         this.circumference;
     }
@@ -40,6 +40,7 @@ class ProgressBar extends HTMLElement {
 
         progressValue.addEventListener('input', () => {
             this.setProgress(progressValue.value);
+            this.setAttribute('progress', progressValue.value);
         });
 
         hide.addEventListener('input', () => {
@@ -63,6 +64,22 @@ class ProgressBar extends HTMLElement {
     addEventListeners = this.addEventListeners.bind(this);
     setProgressCircle = this.setProgressCircle.bind(this);
 
+    attributeChangedCallback(name, oldValue, newValue) {
+        const progressValueInput = document.querySelector('.progress_value');
+        if (name !== 'progress') return;
+        if (newValue < 0) {
+            progressValueInput.value = 0;
+            this.setProgress(0);
+            this.setAttribute('progress', 0);
+        } else if (newValue > 100) {
+            progressValueInput.value = 100;
+            this.setProgress(100);
+            this.setAttribute('progress', 0);
+        }
+        
+    }
+
+
     connectedCallback() {
         this.innerHTML = `
             <div class="body">
@@ -73,7 +90,7 @@ class ProgressBar extends HTMLElement {
 
                 <div>
                     <div class="api">
-                    <input class="progress_value" type="text" value='${this.getAttribute('progress')}'>
+                    <input class="progress_value" value='${this.getAttribute('progress')}' type="number">
                     <p class="api_text">Value</p>
                     </div>
                     <div class="api">
