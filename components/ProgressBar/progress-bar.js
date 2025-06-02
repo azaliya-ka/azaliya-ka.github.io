@@ -64,21 +64,25 @@ class ProgressBar extends HTMLElement {
     addEventListeners = this.addEventListeners.bind(this);
     setProgressCircle = this.setProgressCircle.bind(this);
 
-    attributeChangedCallback(name, oldValue, newValue) {
+    restrictProgressValueInput(newValue) {
         const progressValueInput = document.querySelector('.progress_value');
-        if (name !== 'progress') return;
-        if (newValue < 0) {
-            progressValueInput.value = 0;
+        const numberRegex = /^\d+$/;
+        if (!numberRegex.test(newValue)) {
+            progressValueInput.value = '';
             this.setProgress(0);
-            this.setAttribute('progress', 0);
-        } else if (newValue > 100) {
+        }
+        if (newValue > 100) {
             progressValueInput.value = 100;
             this.setProgress(100);
-            this.setAttribute('progress', 0);
         }
-        
     }
 
+    restrictProgressValueInput = this.restrictProgressValueInput.bind(this);
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (name !== 'progress') return;
+        this.restrictProgressValueInput(newValue);
+    }
 
     connectedCallback() {
         this.innerHTML = `
@@ -90,7 +94,7 @@ class ProgressBar extends HTMLElement {
 
                 <div>
                     <div class="api">
-                    <input class="progress_value" value='${this.getAttribute('progress')}' type="number">
+                    <input class="progress_value" value='${this.getAttribute('progress')}' type="text">
                     <p class="api_text">Value</p>
                     </div>
                     <div class="api">
