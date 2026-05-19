@@ -1,0 +1,325 @@
+html {
+    font-size: 16px;
+}
+body {
+     font-family: "Merriweather", serif;
+     margin: 0;
+}
+
+.header_bg {
+    position: relative;
+}
+
+.header_img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.header_img_max {
+    display: none;
+}
+
+.header_img_mobile {
+    display: none;
+}
+
+.header_content {
+    position: absolute;
+    z-index: 3;
+    left: 72px;
+    top: 26px;
+    max-width: 542px;
+}
+
+.header_content_logo {
+    margin-bottom: 62px;
+}
+
+.header_content_title {
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.center {
+    text-align: center;
+}
+
+.header_content_subtitle {
+    font-size: 18px;
+}
+
+.header_content_buttons {
+    display: flex;
+    gap: 16px;
+    font-size: 16px;
+}
+
+.header_content_buttons div {
+    background-color: #1F1F1F;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 66px;
+    border: 2px solid #1F1F1F;
+    color: #FFFFFF;
+    text-align: center;
+    min-width: 263px;
+    cursor: pointer;
+}
+.header_content_buttons div:hover {
+    background-color: #FBCE51;
+    border: 2px solid #FBCE51;
+    color: #1F1F1F;
+}
+
+.header_content_buttons div:nth-child(2n) {
+    background-color: transparent;
+    color: #1F1F1F;
+}
+.header_content_buttons div:nth-child(2n):hover {
+    background-color: #1F1F1F;
+      border: 2px solid #1F1F1F;
+      color: #FFFFFF;
+}
+.section {
+    margin-top: 80px;
+    display: flex;
+    padding: 0 72px;
+    justify-content: space-between;
+}
+.section_text {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #313131;
+}
+.red {
+    color: #F54932
+}
+.section_bender_image {
+    max-width: 474px;
+}
+.section_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.table {
+     border-collapse: collapse;
+     width: 100%;
+}
+.table tr td {
+    color: #313131;
+    font-size: 20px;
+    font-family: "Golos Text", sans-serif;
+    opacity: 70%;
+    padding: 16px;
+    box-sizing: border-box;
+    border-top: 0;
+    border-left: none;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+}
+.table tr td:nth-child(2n) {
+   opacity: 100%;
+   font-weight: 600;
+   border-right: none;
+   border-left: 1px solid grey;
+}
+.bottom {
+    border-bottom: none !important;
+}
+.section_details {
+    font-family: "Golos Text", sans-serif;
+    font-size: 20px;
+    color: #3057A2;
+}
+.steps_title {
+    padding: 0 72px;
+    color: #313131;
+    font-size: 54px;
+    display: flex;
+    margin-bottom: 34px;
+    margin-top: 165px;
+}
+.steps_title_details {
+  margin-top: 78px;
+  margin-left: -300px;
+}
+.steps {
+    margin-top: 20px;
+    padding: 0 72px;
+    display: flex;
+    gap: 20px;
+}
+.step {
+    background-color: #e3d4c1;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    width: 394px;
+    box-sizing: border-box;
+}
+.step_number {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.step_text {
+    font-family: "Golos Text", sans-serif;
+    font-size: 20px;
+}
+.step_3 {
+    height: 244px;
+}
+.step_common_height {
+    height: 112px;
+}
+.steps_column {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.step_1 {
+    margin-left: -20px;
+}
+.step_7 {
+    flex: 1;
+    position: relative;
+}
+.step_img {
+    position: absolute;
+    top: -100px;
+    right: -60px;
+}
+.attendees {
+    margin-top: 200px;
+    padding: 0 72px;
+    font-family: "Golos Text", sans-serif;
+}
+.attendees_pages {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.attendees_pages_number {
+    font-size: 16px;
+}
+.attendees_title {
+    font-size: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.attendees_pages_arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F1F1F;
+    cursor: pointer;
+}
+.attendees_pages_number_grey {
+    opacity: 60%;
+}
+.attendee_link {
+    border: 1px solid #3057A2;
+    border-radius: 62px;
+    padding: 12px;
+    font-size: 16px;
+    color: #3057A2;
+    cursor: pointer;
+}
+.attendees_images {
+    display: flex;
+    justify-content: space-between;
+}
+.attendee {
+    text-align: center;
+}
+.attendee_name {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 28px 0 8px;
+}
+.attendee_subtitle {
+    font-size: 20px;
+    opacity: 60%;
+    margin-bottom: 30px;
+}
+.footer {
+    margin-top: 200px;
+    background-color: #E9DED4;
+    padding: 40px 72px;
+    font-size: 16px;
+    color: grey;
+}
+
+@media (min-width: 1600px) {
+    .header_img_max {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: auto;
+        max-width: 1920px;
+    }
+    .header_img {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+  .header_img {
+    display: none;
+  }
+  .header_img_max {
+    display: none;
+  }
+  .header_img_mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .header_content_title  {
+    font-size: 36px;
+  }
+  .header_content_buttons {
+    flex-direction: column;
+  }
+  .header_content {
+    left: 20px;
+    top: 26px;
+  }
+  .header_content_logo {
+    margin-bottom: 40px;
+  }
+  .header_content {
+    padding: 0 18px;
+  }
+  .header_content_buttons div {
+    padding: 20px 18px;
+    box-sizing: border-box;
+    min-width: auto;
+ }
+ .section {
+    flex-direction: column;
+    padding: 0 18px;
+ }
+ .section_text {
+    font-size: 28px;
+ }
+ .chess_img {
+    width: 100%;
+ }
+ .header_bg {
+    max-width: auto;
+ }
+}
