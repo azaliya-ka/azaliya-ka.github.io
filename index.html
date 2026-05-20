@@ -75,7 +75,7 @@
     <img class="step_img_mobile" src="./images/Mask group.png" />
      <div class="steps">
       <div>
-      <div class="steps_row s_1">
+      <div class="steps_row mobile_step active_step">
           <div class="step step_common_height">
             <div class="step_number">1</div>
             <div class="step_text">Строительство железнодорожной магистрали Москва-Васюки</div>
@@ -85,7 +85,7 @@
             <div class="step_text">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</div>
           </div>
       </div>
-      <div class="steps_row s_2">
+      <div class="steps_row mobile_step">
           <div class="step step_common_height">
             <div class="step_number">4</div>
             <div class="step_text">Строительство дворца для турнира</div>
@@ -96,24 +96,24 @@
           </div>
       </div>
       </div>
-      <div class="step step_3 s_3">
+      <div class="step step_3 mobile_step">
           <div class="step_number">3</div>
           <div class="step_text">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
       </div>
     </div>
     <div class="steps">
-        <div class="step s_4">
+        <div class="step mobile_step">
           <div class="step_number">6</div>
           <div class="step_text">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</div>
         </div>
-         <div class="step step_7 s_5">
+         <div class="step step_7 mobile_step">
           <img class="step_img" src="./images/Mask group.png" />
           <div class="step_number">7</div>
           <div class="step_text">Создание аэропорта «Большие Васюки» <br /> с регулярным отправлением почтовых <br /> самолётов и дирижаблей во все концы <br /> света, включая Лос-Анжелос и Мельбурн</div>
         </div>
     </div>
     <div class="steps_pages">
-          <div class="pages_arrow">
+          <div class="pages_arrow_step">
             <img src="./images/arrow.svg" />
           </div>
           <div class="step_circles">
@@ -123,7 +123,7 @@
             <div class="step_circle"></div>
             <div class="step_circle"></div>
           </div>
-           <div class="pages_arrow active">
+           <div class="pages_arrow_step active">
             <img src="./images/arrow_right.svg" />
           </div>
     </div>
@@ -144,19 +144,19 @@
         </div>
       </div>
       <div class="attendees_images active_pages">
-        <div class="attendee a_1">
+        <div class="attendee active_page">
         <img class="attendee_image" src="./images/Frame 48095641.png" />
         <div class="attendee_name">Хозе-Рауль Капабланка</div>
         <div class="attendee_subtitle">Чемпион мира по шахматам</div>
         <span class="attendee_link">Подробнее</span>
       </div>
-      <div class="attendee a_2">
+      <div class="attendee">
         <img class="attendee_image" src="./images/Frame 48095641.png" />
         <div class="attendee_name">Эммануил Ласкер</div>
         <div class="attendee_subtitle">Чемпион мира по шахматам</div>
         <span class="attendee_link">Подробнее</span>
       </div>
-      <div class="attendee a_3">
+      <div class="attendee">
         <img class="attendee_image" src="./images/Frame 48095641.png" />
         <div class="attendee_name">Александр Алехин</div>
         <div class="attendee_subtitle">Чемпион мира по шахматам</div>
@@ -164,19 +164,19 @@
       </div>
       </div>
       <div class="attendees_images">
-        <div class="attendee a_4">
+        <div class="attendee">
         <img class="attendee_image" src="./images/Frame 48095641.png" />
         <div class="attendee_name">Арон Нимцович</div>
         <div class="attendee_subtitle">Чемпион мира по шахматам</div>
         <span class="attendee_link">Подробнее</span>
       </div>
-      <div class="attendee a_5">
+      <div class="attendee">
         <img class="attendee_image" src="./images/Frame 48095641.png" />
         <div class="attendee_name">Рихард Рети</div>
         <div class="attendee_subtitle">Чемпион мира по шахматам</div>
         <span class="attendee_link">Подробнее</span>
       </div>
-      <div class="attendee a_6">
+      <div class="attendee">
         <img class="attendee_image" src="./images/Frame 48095641.png" />
         <div class="attendee_name">Остап Бендер</div>
         <div class="attendee_subtitle">Гроссмейстер</div>
@@ -184,11 +184,13 @@
       </div>
       </div>
       <div class="attendees_pages_mobile">
-          <div class="pages_arrow">
+          <div class="pages_arrow not_active" onclick="prevMobileAttendee()">
             <img src="./images/arrow.svg" />
           </div>
-          <div class="attendees_pages_number">1 <span class="attendees_pages_number_grey">/ 6</span></div>
-           <div class="pages_arrow active">
+          <div class="attendees_pages_number">
+             <span class="current_page_number">1</span> <span class="attendees_pages_number_grey">/ 6</span>
+            </div>
+           <div class="pages_arrow" onclick="nextMobileAttendee()">
             <img src="./images/arrow_right.svg" />
           </div>
       </div>

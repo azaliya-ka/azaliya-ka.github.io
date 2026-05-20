@@ -241,7 +241,7 @@ body {
     margin-top: 8px;
     justify-content: center;
 }
-.pages_arrow, .attendees_pages_arrow {
+.pages_arrow, .attendees_pages_arrow, .pages_arrow_step {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -250,6 +250,12 @@ body {
     align-items: center;
     background-color: #D0D0D0;
     cursor: pointer;
+}
+.pages_arrow {
+    background-color: #1F1F1F;
+}
+.not_active {
+    background-color: #D0D0D0;
 }
 .attendees_pages_arrow {
     width: 44px;
@@ -295,6 +301,7 @@ body {
 }
 .attendee {
     text-align: center;
+    display: block;
 }
 .attendee_name {
     font-weight: 600;
@@ -327,6 +334,12 @@ body {
 }
 
 @media (max-width: 600px) {
+    .attendee {
+        display: none;
+    }
+    .active_page {
+        display: block;
+    }
     .mobile_hide {
         display: none;
     }
@@ -407,11 +420,11 @@ body {
         width: 100%;
         padding: 3.875rem 1.25rem 1.25rem;
     }
-    .s_1, .s_2, .s_3, .s_4, .s_5 {
+    .mobile_step {
         height: 300px;
         display: none;
     }
-    .s_1 {
+    .active_step {
         display: block;
     }
     .step_text {
@@ -491,6 +504,7 @@ body {
     }
     .attendees_images {
         flex-direction: column;
+        display: flex;
     }
     .a_2, .a_3, .a_4, .a_5, .a_6 {
         display: none;
