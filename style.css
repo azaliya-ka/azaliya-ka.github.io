@@ -286,8 +286,8 @@ body {
     cursor: pointer;
 }
 .attendees_images {
-    display: flex;
     justify-content: space-between;
+    display: none;
 }
 .attendee_image {
     width: 20rem;
@@ -322,8 +322,8 @@ body {
 .active {
     background-color: #1F1F1F;
 }
-.a_d_2 {
-    display: none;
+.active_pages {
+    display: flex;
 }
 
 @media (max-width: 600px) {
@@ -491,9 +491,6 @@ body {
     }
     .attendees_images {
         flex-direction: column;
-    }
-    .a_d_2 {
-        display: block;
     }
     .a_2, .a_3, .a_4, .a_5, .a_6 {
         display: none;

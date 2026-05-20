@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
     <link href="./style.css" rel="stylesheet" type="text/css">
-    <script src="./main.js"></script>
   </head>
   <body>
     <div class="header_bg">
@@ -133,16 +132,18 @@
       <div class="attendees_title">
         <div>Участники турнира</div>
         <div class="attendees_pages">
-          <div class="attendees_pages_arrow">
+          <div class="attendees_pages_arrow" onclick="prevAttendees()">
             <img src="./images/arrow.svg" />
           </div>
-          <div class="attendees_pages_number">3 <span class="attendees_pages_number_grey">/ 6</span></div>
-           <div class="attendees_pages_arrow active">
+          <div class="attendees_pages_number">
+            <span class="current_pages">3</span> <span class="attendees_pages_number_grey">/ 6</span>
+          </div>
+           <div class="attendees_pages_arrow active" onclick="nextAttendees()">
             <img src="./images/arrow_right.svg" />
           </div>
         </div>
       </div>
-      <div class="attendees_images a_d_1">
+      <div class="attendees_images active_pages">
         <div class="attendee a_1">
         <img class="attendee_image" src="./images/Frame 48095641.png" />
         <div class="attendee_name">Хозе-Рауль Капабланка</div>
@@ -162,7 +163,7 @@
         <span class="attendee_link">Подробнее</span>
       </div>
       </div>
-      <div class="attendees_images a_d_2">
+      <div class="attendees_images">
         <div class="attendee a_4">
         <img class="attendee_image" src="./images/Frame 48095641.png" />
         <div class="attendee_name">Арон Нимцович</div>
@@ -195,5 +196,6 @@
     <div class="footer">
       Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
     </div>
+    <script src="./main.js"></script>
   </body>
 </html>
