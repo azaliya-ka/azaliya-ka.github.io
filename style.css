@@ -91,21 +91,29 @@ body {
       color: #FFFFFF;
 }
 .section {
-    margin-top: 80px;
+    max-width: 1286px;
+    padding: 0 32px;
+    box-sizing: border-box;
+    margin: 80px auto auto;
     display: flex;
-    padding: 0 72px;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
 }
 .section_text {
-    font-size: 36px;
+    font-size: 2.25rem;
     text-transform: uppercase;
     color: #313131;
+}
+.chess_img {
+    width: 24.625rem;
 }
 .red {
     color: #F54932
 }
 .section_bender_image {
-    max-width: 474px;
+    width: 29.625rem;
+    height: auto;
 }
 .section_content {
     display: flex;
@@ -118,7 +126,7 @@ body {
 }
 .table tr td {
     color: #313131;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: "Golos Text", sans-serif;
     opacity: 70%;
     padding: 16px;
@@ -139,7 +147,7 @@ body {
 }
 .section_details {
     font-family: "Golos Text", sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #3057A2;
 }
 .steps_title {
@@ -271,13 +279,20 @@ body {
     color: grey;
 }
 
-.hide {
-    display: inline;
+.desktop_hide {
+    display: none;
+}
+
+.mobile_hide {
+    display: inline-block;
 }
 
 @media (max-width: 600px) {
-  .hide {
+  .mobile_hide {
     display: none;
+  }
+  .desktop_hide {
+    display: inline-block;
   }
   .header_img {
     display: none;
@@ -325,6 +340,8 @@ body {
     .section {
         flex-direction: column;
         padding: 0 18px;
+        margin: 42px auto auto;
+        gap: 24px;
     }
     .section_text {
         font-size: 28px;
@@ -357,8 +374,13 @@ body {
         font-size: 14px;
     }
 }
+@media (min-width: 600px) and (max-width: 1300px) {
+    .section {
+        justify-content: space-around;
+    }
+}
 
-@media (min-width: 1500px) {
+@media (min-width: 1800px) {
     .header_content {
         left: 21.8125rem;
         top: 26px;
@@ -373,16 +395,5 @@ body {
     }
     .header_img {
         display: none;
-    }
-}
-
-@media (min-width: 1500px) and (max-width: 1700px) {
-    html {
-        font-size: 12px;
-    }
-}
-@media (min-width: 1700px) and (max-width: 1850px) {
-    html {
-        font-size: 14px;
     }
 }
