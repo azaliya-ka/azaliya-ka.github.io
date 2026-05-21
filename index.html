@@ -91,6 +91,10 @@
             <div class="step_text">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</div>
           </div>
       </div>
+      <div class="step step_3 mobile_step desktop_hide">
+          <div class="step_number">3</div>
+          <div class="step_text">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
+      </div>
       <div class="steps_row mobile_step">
           <div class="step step_common_height">
             <div class="step_number">4</div>
@@ -102,7 +106,7 @@
           </div>
       </div>
       </div>
-      <div class="step step_3 mobile_step">
+      <div class="step step_3 mobile_hide_flex">
           <div class="step_number">3</div>
           <div class="step_text">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
       </div>
@@ -119,17 +123,17 @@
         </div>
     </div>
     <div class="steps_pages">
-          <div class="pages_arrow_step">
+          <div class="pages_arrow_step not_active" onclick="prevStep()">
             <img src="./images/arrow.svg" />
           </div>
-          <div class="step_circles">
-            <div class="step_circle active"></div>
-            <div class="step_circle"></div>
-            <div class="step_circle"></div>
-            <div class="step_circle"></div>
-            <div class="step_circle"></div>
+          <div class="step_bullets">
+            <div class="step_bullet active"></div>
+            <div class="step_bullet"></div>
+            <div class="step_bullet"></div>
+            <div class="step_bullet"></div>
+            <div class="step_bullet"></div>
           </div>
-           <div class="pages_arrow_step active">
+           <div class="pages_arrow_step" onclick="nextStep()">
             <img src="./images/arrow_right.svg" />
           </div>
     </div>

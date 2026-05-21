@@ -93,3 +93,56 @@ function prevMobileAttendee() {
     showCurrentMobileAttendee(mobileCurrent);
     mobileNumber.innerHTML = mobileCurrent + 1;
 }
+
+// MOBILE STEPS SLIDER
+const steps = document.querySelectorAll('.mobile_step');
+const stepArrows = document.querySelectorAll('.pages_arrow_step');
+const stepBullets = document.querySelectorAll('.step_bullet');
+let currentStep = 0;
+
+function showCurrentStep(index) {
+    steps.forEach(slide => {
+        slide.classList.remove('active_step');
+    });
+
+    steps[index].classList.add('active_step');
+}
+
+function nextStep() {
+    currentStep++;
+    stepArrows.forEach(slide => {
+        slide.classList.remove('not_active');
+    });
+    stepBullets.forEach(slide => {
+        slide.classList.remove('active');
+    });
+
+    if (currentStep >= steps.length - 1) {
+        currentStep = steps.length - 1;
+        stepArrows[stepArrows.length - 1].classList.add('not_active');
+    }
+
+    showCurrentStep(currentStep);
+    stepBullets[currentStep].classList.add('active');
+}
+
+function prevStep() {
+    currentStep--;
+    stepArrows.forEach(slide => {
+        slide.classList.remove('not_active');
+    });
+    stepBullets.forEach(slide => {
+        slide.classList.remove('active');
+    });
+
+
+    if (currentStep < 0) {
+        currentStep = 0;
+    }
+    if (currentStep <= 0) {
+        stepArrows[0].classList.add('not_active');
+    }
+
+    showCurrentStep(currentStep);
+    stepBullets[currentStep].classList.add('active');
+}

@@ -251,7 +251,7 @@ body {
     background-color: #D0D0D0;
     cursor: pointer;
 }
-.pages_arrow {
+.pages_arrow, .pages_arrow_step {
     background-color: #1F1F1F;
 }
 .not_active {
@@ -265,7 +265,7 @@ body {
     max-width: 1286px;
     padding: 0 32px;
     box-sizing: border-box;
-    margin: 200px auto 0;
+    margin: 12.5rem auto 0;
     font-family: "Golos Text", sans-serif;
 }
 .attendees_pages_number {
@@ -325,6 +325,9 @@ body {
 .mobile_hide {
     display: inline-block;
 }
+.mobile_hide_flex {
+    display: inline-flex;
+}
 .active {
     background-color: #1F1F1F;
 }
@@ -376,6 +379,9 @@ body {
     }
     .active_page {
         display: block;
+    }
+    .attendees_title {
+        font-size: 36px;
     }
     .mobile_hide {
         display: none;
@@ -434,6 +440,7 @@ body {
     }
     .steps_pages {
         display: flex;
+        margin-top: 28px;
     }
     .attendees_pages {
         display: none;
@@ -445,6 +452,9 @@ body {
         justify-content: center;
         margin-top: 40px;
     }
+    .step_3 {
+        height: auto;
+    }
     .steps_block {
         padding: 0 18px;
         margin: 148px 0 0;
@@ -452,17 +462,29 @@ body {
     .steps {
         margin-top: 0;
         flex-direction: column;
+        gap: 0;
     }
     .step {
         width: 100%;
-        padding: 3.875rem 1.25rem 1.25rem;
+        padding: 0 0 28px;
     }
     .mobile_step {
+        padding: 62px 24px 0;
         height: 300px;
+        box-sizing: border-box;
         display: none;
     }
+    .steps_row {
+        background-color: #e3d4c1;
+        gap: 0;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .step_common_height {
+        height: auto;
+    }
     .active_step {
-        display: block;
+        display: flex;
     }
     .step_text {
         font-size: 18px;
@@ -470,16 +492,11 @@ body {
     .step_img {
         display: none;
     }
-    .steps_row {
-        background-color: #e3d4c1;
-        gap: 0;
-        flex-direction: column;
-    }
-    .step_3 {
-        height: auto;
-    }
     .step_img_mobile {
         display: inline-block;
+    }
+    .step_7 {
+        position: static;
     }
     .section_text {
         font-size: 28px;
@@ -522,11 +539,11 @@ body {
         margin-top: 0;
         margin-left: 0;
     }
-    .step_circles {
+    .step_bullets {
         display: flex;
         gap: 6px;
     }
-    .step_circle {
+    .step_bullet {
         width: 10px;
         height: 10px;
         border-radius: 50%;
@@ -543,9 +560,6 @@ body {
         flex-direction: column;
         display: flex;
     }
-    .a_2, .a_3, .a_4, .a_5, .a_6 {
-        display: none;
-    }
     .attendee_image {
         width: 244px;
         height: auto;
@@ -553,6 +567,9 @@ body {
     .footer {
         padding: 78px 20px 60px;
         font-size: 1rem;
+    }
+    .mobile_hide_flex {
+        display: none;
     }
 }
 
