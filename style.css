@@ -49,7 +49,7 @@ body {
     gap: 1rem;
     font-size: 1rem;
 }
-.header_content_buttons div {
+.header_content_buttons a {
     background-color: #1F1F1F;
     padding: 0 1.25rem;
     box-sizing: border-box;
@@ -63,18 +63,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
-.header_content_buttons div:hover {
+.header_content_buttons a:hover {
     background-color: #FBCE51;
     border: 2px solid #FBCE51;
     color: #1F1F1F;
 }
 
-.header_content_buttons div:nth-child(2n) {
+.header_content_buttons a:nth-child(2n) {
     background-color: transparent;
     color: #1F1F1F;
 }
-.header_content_buttons div:nth-child(2n):hover {
+.header_content_buttons a:nth-child(2n):hover {
     background-color: #1F1F1F;
       border: 2px solid #1F1F1F;
       color: #FFFFFF;
@@ -139,6 +140,7 @@ body {
     font-family: "Golos Text", sans-serif;
     font-size: 1.25rem;
     color: #3057A2;
+    cursor: pointer;
 }
 .steps_title {
     font-family: "Merriweather", serif;
@@ -422,13 +424,13 @@ body {
     .header_content_logo {
         margin-bottom: 40px;
     }
-    .header_content_buttons div {
+    .header_content_buttons a {
         padding: 20px 0;
         box-sizing: border-box;
         min-width: auto;
         height: 47px;
     }
-    .header_content_buttons div:nth-child(2n) {
+    .header_content_buttons a:nth-child(2n) {
         background-color: #FFFFFF;
         border: none;
     }
