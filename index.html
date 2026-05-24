@@ -25,7 +25,7 @@
         </div>
         <p class="header_content_subtitle">Оплатите взнос на телеграммы для организации <br class="mobile_hide" /> Международного васюкинского турнира по шахматам</p>
         <div class="header_content_buttons">
-          <a href="#supprt">Поддержать <br class="mobile_hide" /> шахматную мысль</a>
+          <a href="#support">Поддержать <br class="mobile_hide" /> шахматную мысль</a>
           <a href="#details">Подробнее <br class="mobile_hide" /> о турнире</a>
         </div>
       </div>
@@ -37,8 +37,8 @@
       </div>
     </div>
     <div class="section">
-      <div id="supprt" class="section_text mobile_hide">Чтобы поддержать <br /> Международный васюкинский  <br /> турнир посетите лекцию на тему: <br /> <span class="red">«Плодотворная дебютная идея»</span></div>
-      <div id="supprt" class="section_text desktop_hide">Чтобы поддержать Международный васюкинский турнир</div>
+      <div id="support" class="section_text mobile_hide">Чтобы поддержать <br /> Международный васюкинский  <br /> турнир посетите лекцию на тему: <br /> <span class="red">«Плодотворная дебютная идея»</span></div>
+      <div id="support" class="section_text desktop_hide">Чтобы поддержать Международный васюкинский турнир</div>
       <img class="chess_img" src="./images/Frame 48095655.png" />
       <div class="section_text desktop_hide">посетите лекцию на тему: <br /> <span class="red">«Плодотворная дебютная идея»</span></div>
     </div>
@@ -138,7 +138,7 @@
           </div>
     </div>
    </div>
-    <div class="attendees">
+   <div class="attendees">
       <div class="attendees_title">
         <div id="details">Участники турнира</div>
         <div class="attendees_pages">
@@ -153,8 +153,9 @@
           </div>
         </div>
       </div>
-      <div class="attendees_images active_pages">
-        <div class="attendee active_page">
+    <div class="attendees_carousel">
+      <div class="attendees_slides active_slide">
+        <div class="attendee active_attendee">
         <img class="attendee_image" src="./images/Frame 48095641.png" />
         <div class="attendee_name">Хозе-Рауль Капабланка</div>
         <div class="attendee_subtitle">Чемпион мира по шахматам</div>
@@ -173,7 +174,7 @@
         <span class="attendee_link">Подробнее</span>
       </div>
       </div>
-      <div class="attendees_images">
+      <div class="attendees_slides">
         <div class="attendee">
         <img class="attendee_image" src="./images/Frame 48095641.png" />
         <div class="attendee_name">Арон Нимцович</div>
@@ -193,14 +194,15 @@
         <span class="attendee_link">Подробнее</span>
       </div>
       </div>
-      <div class="attendees_pages_mobile">
-          <div class="pages_arrow not_active" onclick="prevMobileAttendee()">
+    </div>
+    <div class="attendees_pages_mobile">
+          <div class="pages_arrow">
             <img src="./images/arrow.svg" />
           </div>
           <div class="attendees_pages_number">
              <span class="current_page_number">1</span> <span class="attendees_pages_number_grey">/ 6</span>
             </div>
-           <div class="pages_arrow" onclick="nextMobileAttendee()">
+           <div class="pages_arrow active">
             <img src="./images/arrow_right.svg" />
           </div>
       </div>
@@ -214,6 +216,7 @@
     <div class="footer">
       Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
     </div>
+
     <script src="./main.js"></script>
   </body>
 </html>

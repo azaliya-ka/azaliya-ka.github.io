@@ -253,67 +253,8 @@ body {
     background-color: #D0D0D0;
     cursor: pointer;
 }
-.pages_arrow, .pages_arrow_step {
+.pages_arrow_step {
     background-color: #1F1F1F;
-}
-.not_active {
-    background-color: #D0D0D0;
-}
-.attendees_pages_arrow {
-    width: 44px;
-    height: 44px;
-}
-.attendees {
-    max-width: 1286px;
-    padding: 0 32px;
-    box-sizing: border-box;
-    margin: 12.5rem auto 0;
-    font-family: "Golos Text", sans-serif;
-}
-.attendees_pages_number {
-    font-size: 1rem;
-}
-.attendees_title {
-    font-family: "Merriweather", serif;
-    text-transform: uppercase;
-    font-size: 3.375rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3.75rem;
-}
-.attendees_pages_number_grey {
-    opacity: 60%;
-}
-.attendee_link {
-    border: 1px solid #3057A2;
-    border-radius: 3.875rem;
-    padding: 0.75rem;
-    font-size: 1rem;
-    color: #3057A2;
-    cursor: pointer;
-}
-.attendees_images {
-    justify-content: space-between;
-    display: none;
-}
-.attendee_image {
-    width: 20rem;
-    height: auto;
-}
-.attendee {
-    text-align: center;
-    display: block;
-}
-.attendee_name {
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin: 1.75rem 0 0.5rem;
-}
-.attendee_subtitle {
-    font-size: 1.25rem;
-    opacity: 60%;
-    margin-bottom: 1.875rem;
 }
 .footer {
     background-color: #E9DED4;
@@ -329,12 +270,6 @@ body {
 }
 .mobile_hide_flex {
     display: inline-flex;
-}
-.active {
-    background-color: #1F1F1F;
-}
-.active_pages {
-    display: flex;
 }
 .running_stroke {
     width: 100%;
@@ -359,6 +294,74 @@ body {
 .running_stroke_text span {
     white-space: nowrap;
 }
+.attendees_pages_arrow {
+    width: 44px;
+    height: 44px;
+}
+.attendees {
+    max-width: 1286px;
+    margin: 12.5rem auto 0;
+    padding: 0 32px;
+    box-sizing: border-box;
+    font-family: "Golos Text", sans-serif;
+}
+.attendees_carousel {
+    width: 100%;
+    transition: transform 0.6s ease;
+}
+.attendees_slides {
+    justify-content: space-between;
+    display: none;
+}
+.attendee {
+   text-align: center;
+}
+.attendees_title {
+    font-family: "Merriweather", serif;
+    text-transform: uppercase;
+    font-size: 3.375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.75rem;
+}
+.attendees_pages_number {
+    font-size: 1rem;
+}
+.attendees_pages_number_grey {
+    opacity: 60%;
+}
+.attendee_link {
+    border: 1px solid #3057A2;
+    border-radius: 3.875rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #3057A2;
+    cursor: pointer;
+}
+.attendee_image {
+    width: 20rem;
+    height: auto;
+}
+.attendee_name {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 1.75rem 0 0.5rem;
+}
+.attendee_subtitle {
+    font-size: 1.25rem;
+    opacity: 60%;
+    margin-bottom: 1.875rem;
+}
+.active_slide {
+    display: flex;
+}
+.not_active {
+    background-color: #D0D0D0;
+}
+.active {
+    background-color: #1F1F1F;
+}
 @keyframes running_stroke {
     0% {
         transform: translateX(0);
@@ -375,15 +378,6 @@ body {
     }
     .running_stroke_text  {
         font-size: 16px;
-    }
-    .attendee {
-        display: none;
-    }
-    .active_page {
-        display: block;
-    }
-    .attendees_title {
-        font-size: 36px;
     }
     .mobile_hide {
         display: none;
@@ -434,25 +428,46 @@ body {
         background-color: #FFFFFF;
         border: none;
     }
+    .header_bg {
+        max-width: auto;
+    }
     .section {
         flex-direction: column;
         padding: 0 18px;
         margin: 42px auto 0;
         gap: 24px;
     }
+    .section_text {
+        font-size: 28px;
+    }
+    .section_details {
+        font-size: 18px;
+    }
+    .section_bender_image {
+        width: 100%;
+    }
+    .chess_img {
+        width: 100%;
+    }
+    .table {
+        margin: 44px 0 40px;
+    }
+    .table_row {
+        flex-direction: column;
+    }
+    .table_row div {
+        border-right: none;
+        border-bottom: none;
+        padding: 1rem 0;
+    }
+    .table_row div:nth-child(2n) {
+        border-left: none;
+        border-bottom: 1px solid #D0D0D0;
+        padding: 0 0 1rem;
+    }
     .steps_pages {
         display: flex;
         margin-top: 28px;
-    }
-    .attendees_pages {
-        display: none;
-    }
-    .attendees_pages_mobile {
-        display: flex;
-        gap: 14px;
-        align-items: center;
-        justify-content: center;
-        margin-top: 40px;
     }
     .step_3 {
         height: auto;
@@ -485,9 +500,6 @@ body {
     .step_common_height {
         height: auto;
     }
-    .active_step {
-        display: flex;
-    }
     .step_text {
         font-size: 18px;
     }
@@ -499,37 +511,6 @@ body {
     }
     .step_7 {
         position: static;
-    }
-    .section_text {
-        font-size: 28px;
-    }
-    .chess_img {
-        width: 100%;
-    }
-    .header_bg {
-        max-width: auto;
-    }
-    .table_row {
-        flex-direction: column;
-    }
-    .table_row div {
-        border-right: none;
-        border-bottom: none;
-        padding: 1rem 0;
-    }
-    .table_row div:nth-child(2n) {
-        border-left: none;
-        border-bottom: 1px solid #D0D0D0;
-        padding: 0 0 1rem;
-    }
-    .section_details {
-        font-size: 18px;
-    }
-    .section_bender_image {
-        width: 100%;
-    }
-    .table {
-        margin: 44px 0 40px;
     }
     .steps_title {
         padding: 0 18px;
@@ -551,20 +532,8 @@ body {
         border-radius: 50%;
         background-color: #D0D0D0;
     }
-    .active {
-        background-color: #1F1F1F;
-    }
-    .attendees {
-        padding: 0 18px;
-        margin: 120px auto 0;
-    }
-    .attendees_images {
-        flex-direction: column;
+    .active_step {
         display: flex;
-    }
-    .attendee_image {
-        width: 244px;
-        height: auto;
     }
     .footer {
         padding: 78px 20px 60px;
@@ -572,6 +541,47 @@ body {
     }
     .mobile_hide_flex {
         display: none;
+    }
+    .attendees_pages {
+        display: none;
+    }
+    .attendees {
+        margin: 120px auto 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+    }
+    .attendees_slides {
+        display: flex;
+    }
+    .attendees_carousel {
+        display: flex;
+    }
+    .attendee {
+        width: 100vw;
+        padding: 0 18px;
+        box-sizing: border-box;
+    }
+    .attendee_image {
+        width: 244px;
+        height: auto;
+    }
+    .attendees_title {
+        padding: 0 18px;
+        font-size: 36px;
+    }
+    .attendees_pages_mobile {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .active_attendee {
+        display: block;
+    }
+    .active {
+        background-color: #1F1F1F;
     }
 }
 
