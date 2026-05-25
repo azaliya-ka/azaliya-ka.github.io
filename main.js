@@ -1,51 +1,3 @@
-
-// DESKTOP ATTENDEES SLIDER
-const attendees = document.querySelectorAll('.attendees_slides');
-const arrows = document.querySelectorAll('.attendees_pages_arrow');
-const number = document.querySelector('.current_pages');
-let current = 0;
-
-function showCurrentAttendees(index) {
-    attendees.forEach(slide => {
-        slide.classList.remove('active_slide');
-    });
-
-    attendees[index].classList.add('active_slide');
-}
-
-function setActiveArrow(index) {
-    arrows.forEach(slide => {
-        slide.classList.remove('active');
-    });
-
-    arrows[index].classList.add('active');
-}
-
-function nextAttendees() {
-    current++;
-
-    if (current >= attendees.length - 1) {
-        number.innerHTML="6";
-        setActiveArrow(0);
-        current = attendees.length - 1;
-    }
-
-
-    showCurrentAttendees(current);
-}
-
-function prevAttendees() {
-    current--;
-
-    if (current <= 0) {
-        number.innerHTML="3";
-        setActiveArrow(arrows.length - 1);
-        current = 0;
-    }
-
-    showCurrentAttendees(current);
-}
-
 // MOBILE STEPS SLIDER
 const steps = document.querySelectorAll('.mobile_step');
 const stepArrows = document.querySelectorAll('.pages_arrow_step');
@@ -99,15 +51,20 @@ function prevStep() {
     stepBullets[currentStep].classList.add('active');
 }
 
-// MOBILE ATTENDEES CAROUSEL
+// ATTENDEES CAROUSEL
 const slides = document.querySelector('.attendees_carousel');
 const totalMobileSlides = document.querySelectorAll('.attendee').length;
 const mobileAttendeeNumber = document.querySelector('.current_page_number');
 const mobileArrows = document.querySelectorAll('.pages_arrow');
+const totalDesktopSlides = document.querySelectorAll('.attendees_slides').length;
+const desktopAttendeeNumber = document.querySelector('.current_pages');
+const desktopArrows = document.querySelectorAll('.attendees_pages_arrow');
 let index = 0;
+let desktopIndex = 0;
 
 function nextAttendee() {
     index++;
+    desktopIndex++
 
     if (window.innerWidth <= 600) {
         if (index == totalMobileSlides - 1) {
@@ -123,6 +80,20 @@ function nextAttendee() {
 
         mobileAttendeeNumber.innerHTML = index + 1;
         slides.style.transform = `translateX(-${index * 100}%)`;
+    } else {
+        if (desktopIndex == totalDesktopSlides - 1) {
+            desktopAttendeeNumber.innerHTML = 6;
+            desktopArrows[desktopArrows.length - 1].classList.remove('active');
+            desktopArrows[0].classList.add('active');
+        }
+        if (desktopIndex >= totalDesktopSlides) {
+            desktopIndex = 0;
+            desktopAttendeeNumber.innerHTML = 3;
+            desktopArrows[desktopArrows.length - 1].classList.add('active');
+            desktopArrows[0].classList.remove('active');
+        }
+
+        slides.style.transform = `translateX(-${desktopIndex * 100}%)`;
     }
 }
 

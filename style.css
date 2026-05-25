@@ -301,22 +301,30 @@ body {
 .attendees {
     max-width: 1286px;
     margin: 12.5rem auto 0;
-    padding: 0 32px;
+    padding: 0 0 20px;
     box-sizing: border-box;
     font-family: "Golos Text", sans-serif;
+    overflow: hidden;
+    position: relative;
 }
 .attendees_carousel {
-    width: 100%;
     transition: transform 0.6s ease;
+    display: grid;
+    grid-template-columns: 100% 100%;
+    grid-auto-flow: column;
 }
 .attendees_slides {
+    padding: 0 32px;
     justify-content: space-between;
-    display: none;
+    display: flex;
+    box-sizing: border-box;
 }
 .attendee {
    text-align: center;
 }
 .attendees_title {
+    padding: 0 32px;
+    box-sizing: border-box;
     font-family: "Merriweather", serif;
     text-transform: uppercase;
     font-size: 3.375rem;
@@ -352,9 +360,6 @@ body {
     font-size: 1.25rem;
     opacity: 60%;
     margin-bottom: 1.875rem;
-}
-.active_slide {
-    display: flex;
 }
 .not_active {
     background-color: #D0D0D0;
@@ -548,11 +553,11 @@ body {
     .attendees {
         margin: 120px auto 0;
         padding: 0;
-        overflow: hidden;
-        position: relative;
     }
     .attendees_slides {
         display: flex;
+        justify-content: flex-start;
+        padding: 0;
     }
     .attendees_carousel {
         display: flex;
