@@ -2,8 +2,8 @@ html {
     font-size: 16px;
 }
 body {
-     font-family: "Merriweather", serif;
-     margin: 0;
+    font-family: "Golos Text", sans-serif;
+    margin: 0;
 }
 .header_bg {
     position: relative;
@@ -35,6 +35,7 @@ body {
     font-size: 3.75rem;
     line-height: 1.1;
     text-transform: uppercase;
+    font-family: "Merriweather", serif;
 }
 .center {
     text-align: center;
@@ -90,16 +91,20 @@ body {
     flex-wrap: wrap;
     gap: 32px;
 }
+.section:nth-child(2n) {
+    margin: 64px auto 0;
+}
 .section_text {
     font-size: 2.25rem;
     text-transform: uppercase;
     color: #313131;
+    font-family: "Merriweather", serif;
 }
 .chess_img {
     width: 24.625rem;
 }
 .red {
-    color: #F54932
+    color: #F54932;
 }
 .section_bender_image {
     width: 29.625rem;
@@ -118,7 +123,6 @@ body {
     width: 100%;
     color: #313131;
     font-size: 1.25rem;
-    font-family: "Golos Text", sans-serif;
     opacity: 70%;
     padding: 1rem;
     box-sizing: border-box;
@@ -127,17 +131,19 @@ body {
     border-bottom: 1px solid #D0D0D0;
     border-right: 1px solid #D0D0D0;
 }
+.bottom {
+    border-bottom: 0 !important;
+}
+.line {
+    text-decoration: line-through #F54932;
+}
 .table_row div:nth-child(2n) {
    opacity: 100%;
    font-weight: 600;
    border-right: none;
    border-left: 1px solid #D0D0D0;
 }
-.bottom {
-    border-bottom: none !important;
-}
 .section_details {
-    font-family: "Golos Text", sans-serif;
     font-size: 1.25rem;
     color: #3057A2;
     cursor: pointer;
@@ -150,12 +156,13 @@ body {
     max-width: 1286px;
     padding: 0 32px;
     box-sizing: border-box;
-    margin: 10.3125rem auto 2.125rem;
+    margin: 12.5rem auto 3.375rem;
     text-transform: uppercase;
 }
 .steps_title_details {
   margin-top: 4.875rem;
   margin-left: -18.75rem;
+  font-family: "Golos Text", sans-serif;
 }
 .steps_block {
     position: relative;
@@ -176,7 +183,6 @@ body {
 .steps {
     display: flex;
     gap: 1.25rem;
-    margin-top: 1.25rem;
 }
 .step {
     background-color: #e3d4c1;
@@ -190,7 +196,6 @@ body {
     width: 2.25rem;
     height: 2.25rem;
     font-size: 1.25rem;
-    font-family: "Golos Text", sans-serif;
     flex-shrink: 0;
     border-radius: 50%;
     background-color: #FFFFFF;
@@ -200,7 +205,6 @@ body {
     font-weight: 600;
 }
 .step_text {
-    font-family: "Golos Text", sans-serif;
     font-size: 1.25rem;
 }
 .step_common_height {
@@ -258,7 +262,7 @@ body {
 }
 .footer {
     background-color: #E9DED4;
-    padding: 2.5rem 4.5rem;
+    padding: 2.5rem 4.5rem 4.5rem;
     font-size: 1rem;
     color: grey;
 }
@@ -280,7 +284,7 @@ body {
     padding: 1.125rem 0;
 }
 .footer_stroke {
-    margin-top: 12.5rem;
+    margin-top: 8.75rem;
 }
 .running_stroke_text {
     font-family: "Merriweather", serif;
@@ -301,9 +305,8 @@ body {
 .attendees {
     max-width: 1286px;
     margin: 12.5rem auto 0;
-    padding: 0 0 20px;
+    padding: 0 0 15px;
     box-sizing: border-box;
-    font-family: "Golos Text", sans-serif;
     overflow: hidden;
     position: relative;
 }
@@ -422,6 +425,7 @@ body {
     }
     .header_content_logo {
         margin-bottom: 40px;
+        width: 213px;
     }
     .header_content_buttons a {
         padding: 20px 0;
@@ -439,8 +443,11 @@ body {
     .section {
         flex-direction: column;
         padding: 0 18px;
-        margin: 42px auto 0;
+        margin: 48px auto 0;
         gap: 24px;
+    }
+    .section:nth-child(2n) {
+        margin: 34px auto 0;
     }
     .section_text {
         font-size: 28px;
@@ -519,7 +526,7 @@ body {
     }
     .steps_title {
         padding: 0 18px;
-        margin: 120px auto auto;
+        margin: 120px auto 0;
         flex-direction: column;
         font-size: 36px;
     }
@@ -541,7 +548,7 @@ body {
         display: flex;
     }
     .footer {
-        padding: 78px 20px 60px;
+        padding: 40px 20px 60px;
         font-size: 1rem;
     }
     .mobile_hide_flex {
@@ -574,6 +581,7 @@ body {
     .attendees_title {
         padding: 0 18px;
         font-size: 36px;
+        margin-bottom: 2.5rem;
     }
     .attendees_pages_mobile {
         display: flex;
@@ -588,8 +596,16 @@ body {
     .active {
         background-color: #1F1F1F;
     }
+    .footer_stroke {
+        margin-top: 6.25rem;
+    }
 }
 
+@media (min-width: 600px) and (max-width: 660px) {
+    .step_img {
+        width: 150px;
+    }
+}
 @media (min-width: 600px) and (max-width: 800px) {
     html {
         font-size: 8px;
